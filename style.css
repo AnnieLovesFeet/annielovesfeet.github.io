@@ -118,14 +118,13 @@ footer {
 
 
 .images_row {
-    display: flex;
-    flex-direction: row;
+    display: grid;
     flex-wrap: wrap;
+    grid-template-columns: repeat(3, 1fr);
     justify-content: center;
     gap: 24px;
-    margin: 0 32px, 0 32px;
+    margin: 0 128px 0 128px;
     font-family: "Segoe UI", "Arial", sans-serif;
-    padding: 32px;
     text-align: center;
 }
 
@@ -139,7 +138,9 @@ footer {
 
 .censored_img {
     border-radius: 12px;
-    width: 50vh;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
 }
 
 
