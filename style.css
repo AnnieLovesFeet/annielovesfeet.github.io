@@ -208,4 +208,14 @@ footer {
     .padding {
         padding: 16px;
     }
+
+    .images_row {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 24px;
+        margin: 0 18px 0 18px;
+        font-family: "Segoe UI", "Arial", sans-serif;
+        text-align: center;
+    }
 }
