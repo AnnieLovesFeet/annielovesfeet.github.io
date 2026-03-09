@@ -167,7 +167,6 @@ footer {
 
     .text {
         margin: 0 18px;
-        text-align: justify;
     }
 
     .navbar {
@@ -207,6 +206,6 @@ footer {
     }
 
     .padding {
-        padding: 15px;
+        padding: 16px;
     }
 }
