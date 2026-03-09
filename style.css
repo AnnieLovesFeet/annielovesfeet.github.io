@@ -162,26 +162,24 @@ footer {
 
 
 @media (max-width: 600px) {
-    /* 1. Nagłówki i Tekst */
     h1 { font-size: 24px; }
     h2 { font-size: 18px; }
 
     .text {
-        margin: 0 20px; /* Redukcja ogromnych marginesów 128px */
+        margin: 0 18px;
         text-align: justify;
     }
 
-    /* 2. Nawigacja (Mobile Menu) */
     .navbar {
-        height: auto; /* Pozwól menu się rozrosnąć w pionie */
-        padding: 10px 0;
+        height: auto;
+        padding: 12px 0;
     }
 
     nav {
         flex-direction: column;
         align-items: center;
-        gap: 10px;
-        padding-right: 0; /* Wyśrodkowanie */
+        gap: 12px;
+        padding-right: 0;
         width: 100%;
     }
 
@@ -195,11 +193,11 @@ footer {
     }
 
     .censor_tile {
-        width: 140px;
+        width: 120px;
     }
 
     .censor_profile {
-        width: 120px;
+        width: 100px;
     }
 
     .censored_img {
