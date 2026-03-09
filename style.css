@@ -161,25 +161,53 @@ footer {
 
 
 @media (max-width: 600px) {
-    h1 {
-        font-size: 28px;
+    /* 1. Nagłówki i Tekst */
+    h1 { font-size: 24px; }
+    h2 { font-size: 18px; }
+
+    .text {
+        margin: 0 20px; /* Redukcja ogromnych marginesów 128px */
+        text-align: justify;
     }
 
-    h2 {
-        font-size: 16px;
+    /* 2. Nawigacja (Mobile Menu) */
+    .navbar {
+        height: auto; /* Pozwól menu się rozrosnąć w pionie */
+        padding: 10px 0;
     }
 
     nav {
         flex-direction: column;
         align-items: center;
+        gap: 10px;
+        padding-right: 0; /* Wyśrodkowanie */
+        width: 100%;
     }
 
     .nav_button {
-        flex-direction: column;
-        align-items: center;
+        width: 80%;
+        text-align: center;
     }
 
-    .text {
-        margin: 0 32px 0 32px;
+    header {
+        height: 50vh;
+    }
+
+    .censor_tile {
+        width: 140px;
+    }
+
+    .censor_profile {
+        width: 120px;
+    }
+
+    .censored_img {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+    }
+
+    .padding {
+        padding: 15px;
     }
 }
