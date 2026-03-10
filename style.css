@@ -140,6 +140,9 @@ a {
     width: 100%;
     height: auto;
     object-fit: cover;
+    aspect-ratio: 4/5;
+    object-position: top;
+    display: block;
 }
 
 
@@ -210,12 +213,43 @@ a {
 }
 
 
+.collection-tile {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: aliceblue;
+    padding: 12px;
+    border-radius: 12px;
+    width: 40vh;
+    text-align: center;
+
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+
+    font-family: "Segoe UI", "Arial", sans-serif;
+    font-weight: bold;
+}
+
+
+.collection-tile:hover {
+    transform: translateY(-10px) scale(1.03); 
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2); 
+}
+
+
 @media (max-width: 600px) {
     h1 { font-size: 24px; }
     h2 { font-size: 18px; }
 
     .text {
         margin: 0 18px;
+    }
+
+
+    .title {
+        margin: 0 0;
     }
 
     .navbar {
