@@ -1,0 +1,190 @@
+@font-face {
+    font-family: "Playfair Display";
+    src: url("assets/fonts/PlayfairDisplay-Regular.ttf");
+}
+
+@font-face {
+    font-family: "Signika";
+    src: url("assets/fonts/Signika-Regular.ttf");
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+
+    background-color: linen;
+}
+
+header, footer {
+    width: 100%;
+    height: 8vh;
+    background-color: plum;
+    color: white;
+    text-align: center;
+    align-content: center;
+}
+
+.gradient-top {
+    width: 100%;
+    height: 4vh;
+    background: linear-gradient(plum, rgba(0, 0, 0, 0));
+}
+
+.gradient-bottom {
+    width: 100%;
+    height: 4vh;
+    background: linear-gradient(rgba(0, 0, 0, 0), plum);
+}
+
+h1 {
+    font-family: "Playfair Display", "Arial", sans-serif;
+}
+
+h2 {
+    font-family: "Playfair Display", "Arial", sans-serif;
+    color: plum;
+    width: 100%;
+    border-bottom: plum 2px solid;
+    text-align: center;
+    margin-bottom: 16px;
+    padding-bottom: 4px;
+}
+
+h3 {
+    font-family: "Playfair Display", "Arial", sans-serif;
+}
+
+p {
+    font-family: "Signika", "Arial", sans-serif;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+
+    gap: 16px;
+
+    width: 100%;
+
+    align-items: center;
+
+    margin-top: 16px;
+    margin-bottom: 16px;
+}
+
+.about, .pages, .nsfw-pages {
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+
+    width: 72%;
+
+    border-radius: 32px;
+
+    gap: 16px;
+
+    background: white;
+    padding: 16px;
+    border-radius: 32px;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    width: 100%;
+    justify-items: space-between;
+}
+
+.reddit, .discord, .github {
+    display: flex;
+    flex-direction: row;
+
+    width: 100%;
+    height: 4vh;
+    gap: 8px;
+
+    border-radius: 48px;
+    padding: 1vh;
+
+    color: white;
+
+    align-items: center;
+}
+
+.reddit img, .discord img, .github img {
+    height: 4vh;
+}
+
+.reddit {
+    background-color: #FF4500;
+}
+
+.discord {
+    background-color: #5865F2;
+}
+
+.github {
+    background-color: black;
+}
+
+.page, .nsfw-page {
+    display: flex;
+    flex-direction: row;
+
+    align-items: center;
+
+    width: 100%;
+
+    border-radius: 32px;
+
+    gap: 8px;
+}
+
+.comming-soon-icon {
+    display: flex;
+    flex-direction: column;
+
+    height: 8vh;
+
+    background: linear-gradient(blue, darkblue);
+
+    border-radius: 16px;
+    padding: 8px;
+}
+
+.nsfw-icon {
+    display: flex;
+    flex-direction: column;
+
+    height: 8vh;
+
+    background: linear-gradient(red, crimson);
+
+    border-radius: 16px;
+    padding: 8px;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+}
+
+@media (max-width: 600px) {
+    .row {
+        flex-direction: column;
+    }    
+
+    .about, .pages, .nsfw-pages {
+        width: 90%;
+        padding: 8px;
+    }
+}
