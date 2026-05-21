@@ -53,7 +53,6 @@ h2 {
     width: 100%;
     border-bottom: plum 2px solid;
     text-align: center;
-    margin-bottom: 16px;
     padding-bottom: 4px;
 }
 
@@ -63,6 +62,10 @@ h3 {
 
 p {
     font-family: "Signika", "Arial", sans-serif;
+}
+
+a {
+    text-decoration: none;
 }
 
 main {
@@ -108,20 +111,22 @@ main {
     display: flex;
     flex-direction: row;
 
-    width: 100%;
+    width: auto;
     height: 4vh;
     gap: 8px;
 
-    border-radius: 48px;
+    border-radius: 32px;
     padding: 1vh;
 
     color: white;
 
     align-items: center;
+
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .reddit img, .discord img, .github img {
-    height: 4vh;
+    width: 4vh;
 }
 
 .reddit {
@@ -134,6 +139,16 @@ main {
 
 .github {
     background-color: black;
+}
+
+.reddit:hover, .discord:hover, .github:hover {
+    transform: scale(1.03);
+    box-shadow: 0 0 4px 2px rgba(0,0,0,0.5);
+}
+
+.reddit:active, .discord:active, .github:active {
+    transform: scale(0.97);
+    box-shadow: 0 0 0 0 black;
 }
 
 .page, .nsfw-page {
@@ -178,7 +193,17 @@ main {
     flex-direction: column;
 }
 
+.status {
+    font-family: "Signika", "Arial", sans-serif;
+    font-weight: bold;
+    color: gray;
+}
+
 @media (max-width: 600px) {
+    .main {
+        gap: 4px;
+    }
+
     .row {
         flex-direction: column;
     }    
@@ -186,5 +211,10 @@ main {
     .about, .pages, .nsfw-pages {
         width: 90%;
         padding: 8px;
+        border-radius: 16px;
+    }
+
+    .reddit, .discord, .github {
+        border-radius: 16px;
     }
 }
