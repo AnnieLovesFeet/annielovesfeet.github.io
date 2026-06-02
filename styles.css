@@ -58,6 +58,7 @@ h2 {
 
 h3 {
     font-family: "Playfair Display", "Arial", sans-serif;
+    font-size: 2em;
 }
 
 p {
@@ -96,15 +97,24 @@ main {
 
     background: white;
     padding: 16px;
-    border-radius: 32px;
+    border-radius: 16px;
+
+    box-shadow: 0 0 4px 2px rgba(0, 0, 0, 0.5);
 }
 
 .row {
     display: flex;
     flex-direction: row;
-    gap: 16px;
+    gap: 8px;
     width: 100%;
     justify-items: space-between;
+    align-items: center;
+    align-content: space-between;
+}
+
+.row p {
+    margin-left: 8px;
+    margin-right: 8px;
 }
 
 .reddit, .discord, .github {
@@ -153,15 +163,24 @@ main {
 
 .page, .nsfw-page {
     display: flex;
-    flex-direction: row;
-
+    flex-direction: column;
     align-items: center;
-
     width: 100%;
-
-    border-radius: 32px;
-
+    border-radius: 16px;
     gap: 8px;
+    text-decoration: none;
+    color: black;
+    padding: 8px;
+    background-color: rgba(221, 161, 221, 0.2);
+    padding: 8px 0;
+
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.page:hover, .nsfw-page:hover {
+    background-color: rgba(221, 161, 221, 0.4);
+    transform: scale(1.02);
+    box-shadow: 0 0 4px 2px rgba(0, 0, 0, 0.3);
 }
 
 .comming-soon-icon {
@@ -174,6 +193,8 @@ main {
 
     border-radius: 16px;
     padding: 8px;
+
+    margin-left: 8px;
 }
 
 .nsfw-icon {
@@ -186,6 +207,8 @@ main {
 
     border-radius: 16px;
     padding: 8px;
+
+    margin-left: 8px;
 }
 
 .column {
@@ -196,7 +219,41 @@ main {
 .status {
     font-family: "Signika", "Arial", sans-serif;
     font-weight: bold;
-    color: gray;
+    color: white;
+}
+
+.header-default, .header-beta-safe-space {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: calc(100% - 16px);
+    height: 256px;
+    margin-left: 8px;
+    margin-right: 8px;
+
+    text-align: center;
+    text-shadow: 0 0 8px rgba(0, 0, 0, 1);
+    color: white;
+
+    background-size: cover;
+    background-position: center;
+
+    border-radius: 16px;
+}
+
+.header-default {
+    background: linear-gradient(
+        rgba(255, 255, 255, 0.8),
+        rgba(255, 255, 255, 0.2),
+        rgba(255, 255, 255, 0.8)
+    )
+}
+
+.header-beta-safe-space {
+    background-image: url("assets/images/beta-safe-space-header.jpg");
+    filter: brightness(0.8);
 }
 
 @media (max-width: 600px) {
