@@ -222,7 +222,7 @@ main {
     color: white;
 }
 
-.header-default, .header-beta-safe-space {
+.header-default, .header-beta-safe-space, .header-chloe-hub {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -253,6 +253,11 @@ main {
 
 .header-beta-safe-space {
     background-image: url("assets/images/beta-safe-space-header.jpg");
+    filter: brightness(0.8);
+}
+
+.header-chloe-hub {
+    background-image: url("assets/images/chloe-hub-header.jpg");
     filter: brightness(0.8);
 }
 
