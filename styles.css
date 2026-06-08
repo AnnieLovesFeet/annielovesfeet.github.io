@@ -171,7 +171,11 @@ main {
     text-decoration: none;
     color: black;
     padding: 8px;
-    background-color: rgba(221, 161, 221, 0.2);
+    background: linear-gradient(
+        135deg,
+        rgba(221, 160, 221, 0.4),
+        rgba(255, 105, 180, 0.4)
+    );
     padding: 8px 0;
 
     transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
@@ -181,6 +185,12 @@ main {
     background-color: rgba(221, 161, 221, 0.4);
     transform: scale(1.02);
     box-shadow: 0 0 4px 2px rgba(0, 0, 0, 0.3);
+}
+
+.page:active, .nsfw-page:active {
+    background-color: rgba(255, 105, 180, 0.4);
+    transform: scale(0.98);
+    box-shadow: 0 0 0 0 black;
 }
 
 .comming-soon-icon {
@@ -261,6 +271,36 @@ main {
     filter: brightness(0.8);
 }
 
+.certificates {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: 12px;
+    width: 256px;
+}
+
+.certificates p {
+    color: white;
+}
+
+
+.safe-for-betas {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    width: 100%;
+    gap: 4px;
+    padding: 2px 4px;
+    border-radius: 16px;
+    background: linear-gradient(
+        -135deg,
+        lightblue,
+        deepskyblue
+    );
+}
+
 @media (max-width: 600px) {
     .main {
         gap: 4px;
@@ -278,5 +318,23 @@ main {
 
     .reddit, .discord, .github {
         border-radius: 16px;
+    }
+
+    .nsfw-icon {
+        display: none;
+    }
+
+    .certificates {
+        flex-direction: row;
+    }
+
+    .certificates p {
+        display: none;
+    }
+
+    .safe-for-betas {
+        width: auto;
+        padding: 4px;
+        margin-left: auto;
     }
 }
